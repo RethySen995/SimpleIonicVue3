@@ -5,9 +5,7 @@
         name: "map-page",
         methods: {
             onDismiss() {
-                this.$router.push('/').then( () => {
-                    this.$router.go(0);
-                });
+                this.$router.back();
             }
         }
     });

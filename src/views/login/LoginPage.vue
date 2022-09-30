@@ -14,9 +14,7 @@ export default defineComponent({
     },
     methods: {
         onDismiss() {
-            this.$router.push('/').then( () => {
-                this.$router.go(0);
-            });
+            this.$router.back();
         }
     },
     created: function() {

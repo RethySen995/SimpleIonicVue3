@@ -104,6 +104,15 @@ export default defineComponent({
         },
         async setUserLocation() {
             await this.getUserCurrentLocation().then(async (res) => {
+                if ( res.errCode && res.errMessage ) {
+                    this.modalService.modalAlert({
+                        message: res.errMessage,
+                        callback:() => {
+                            // this.$logger.info('User Current Location:' + JSON.stringify(res));
+                            return;
+                        }
+                    });
+                }
                 this.$logger.info('User Current Location:' + JSON.stringify(res));
                 await this.initMap(res.lat, res.lng).then((result: boolean) => {
                     this.map = result;

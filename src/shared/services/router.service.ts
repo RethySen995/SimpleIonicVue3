@@ -12,7 +12,6 @@ class RouterService {
     }
     public subscribe(url: string ) {
         this.router.push(url).then( () => {
-            this.logger.info(url + 'is subscribed');
         }).catch( (error) => {
             this.modalService.modalAlert({message: error});
         });

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="80" height="80" viewBox="0 0 80 80">
+  <defs>
+    <filter id="Rectangle_DS" x="6" y="6" width="74" height="74" filterUnits="userSpaceOnUse">
+      <feOffset dx="3" dy="3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feFlood flood-color="#454545" flood-opacity="0.2"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient" x1="0.962" y1="0.962" x2="-0.282" y2="-0.104" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#f2f3f6"/>
+      <stop offset="1" stop-color="#e5e6ec"/>
+    </linearGradient>
+    <filter id="Rectangle_WS" x="0" y="0" width="74" height="74" filterUnits="userSpaceOnUse">
+      <feOffset dx="-3" dy="-3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur-2"/>
+      <feFlood flood-color="#454545" flood-opacity="0.2"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="그룹_2904" data-name="그룹 2904" transform="translate(-278 -139)">
+    <g id="CAL_BTN" data-name="CAL BTN" transform="translate(296 157)">
+      <g id="Fuction_BTN" data-name="Fuction BTN">
+        <g transform="matrix(1, 0, 0, 1, -18, -18)" filter="url(#Rectangle_DS)">
+          <rect id="Rectangle_DS-2" data-name="Rectangle DS" width="44" height="44" rx="10" transform="translate(18 18)" fill="#edeef2"/>
+        </g>
+        <g transform="matrix(1, 0, 0, 1, -18, -18)" filter="url(#Rectangle_WS)">
+          <rect id="Rectangle_WS-2" data-name="Rectangle WS" width="44" height="44" rx="10" transform="translate(18 18)" fill="url(#linear-gradient)"/>
+        </g>
+      </g>
+    </g>
+    <g id="그룹_2902" data-name="그룹 2902" transform="translate(107 -63)">
+      <g id="그룹_2903" data-name="그룹 2903" transform="translate(-1)">
+        <g id="타원_280" data-name="타원 280" transform="translate(201 231)" fill="none" stroke="#0060e2" stroke-width="1.5">
+          <circle cx="11" cy="11" r="11" stroke="none"/>
+          <circle cx="11" cy="11" r="10.25" fill="none"/>
+        </g>
+        <g id="타원_281" data-name="타원 281" transform="translate(209 239)" fill="#0060e2" stroke="#0060e2" stroke-width="1.5">
+          <circle cx="3" cy="3" r="3" stroke="none"/>
+          <circle cx="3" cy="3" r="2.25" fill="none"/>
+        </g>
+        <path id="패스_2473" data-name="패스 2473" d="M9124,233.84v4.486" transform="translate(-8912 -2)" fill="none" stroke="#0060e2" stroke-width="1.5"/>
+        <path id="패스_2474" data-name="패스 2474" d="M9124,233.84v4.486" transform="translate(-8912 14)" fill="none" stroke="#0060e2" stroke-width="1.5"/>
+        <path id="패스_2475" data-name="패스 2475" d="M0,0V4.486" transform="translate(222.243 242.091) rotate(90)" fill="none" stroke="#0060e2" stroke-width="1.5"/>
+        <path id="패스_2476" data-name="패스 2476" d="M0,0V4.486" transform="translate(206.243 242.091) rotate(90)" fill="none" stroke="#0060e2" stroke-width="1.5"/>
+      </g>
+    </g>
+  </g>
+</svg>

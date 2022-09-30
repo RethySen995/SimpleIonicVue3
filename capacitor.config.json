@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "simple_mbanking",
+	"webDir": "dist",
+	"bundledWebRuntime": false
+}

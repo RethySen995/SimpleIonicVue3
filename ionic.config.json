@@ -1,0 +1,7 @@
+{
+  "name": "simple_mbanking",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}

@@ -1,0 +1,35 @@
+
+  <ion-content>
+    <h4>Modal</h4>
+    <div>
+      <ion-button @click="alert()">Alert</ion-button>
+      <ion-button @click="toast()">Toast</ion-button>
+      <ion-button @click="confirm()">Confirm</ion-button>
+      <ion-button @click="openModal()">Modal</ion-button>
+    </div>
+    <h4>Router</h4>
+    <div>
+      <ion-button @click="doLogin()">Log in</ion-button>
+    </div>
+    <h4>Maps</h4>
+    <div>
+      <ion-button @click="gotoMap()">Map</ion-button>
+      
+    </div>
+    <h4>Encryption</h4>
+    <div>
+      <ion-button @click="doEncryptAndDecrypt()">Encryption</ion-button>
+    </div>
+    <h4>Translation</h4>
+    <div>
+      <ion-button @click="changeLangauge('en')">English</ion-button>
+      <ion-button @click="changeLangauge('km')">Khmer</ion-button>
+      <ion-button @click="changeLangauge('ko')">Korean</ion-button>
+      <p>Language Code is : {{$i18n.locale}}</p>
+      <p>Translation Result: {{$t('message')}}</p>
+    </div>
+    <h4>Data Tranform</h4>
+    <div>
+      <p>Date Tranform "20220922" to : {{$filter.datetimeFormat(date)}}</p>
+    </div>
+  </ion-content>

@@ -1,0 +1,76 @@
+/* Noto font */
+@font-face {
+	font-family: "Noto Sans";
+	font-style: normal;
+	font-weight: 300;
+	src: local("Noto Sans"), local("Noto-Sans-Light"), url("../assets/fonts/NotoSans-Light.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Noto Sans";
+	font-style: normal;
+	font-weight: normal;
+	src: local("Noto Sans"), local("Noto-Sans-Regular"), url("../assets/fonts/NotoSans-Regular.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Noto Sans";
+	font-style: normal;
+	font-weight: 500;
+	src: local("Noto Sans"), local("Noto-Sans-Medium"), url("../assets/fonts/NotoSans-Medium.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Noto Sans";
+	font-style: normal;
+	font-weight: bold;
+	src: local("Noto Sans Bold"), local("Noto-Sans-Bold"), url("../assets/fonts/NotoSans-Bold.ttf") format("truetype");
+}
+
+/* Noto Khmer font */
+@font-face {
+	font-family: "Noto Sans Khmer";
+	font-style: normal;
+	font-weight: 300;
+	src: local("Noto Sans Khmer"), local("Noto-SansKhmer-Light"), url("../assets/fonts/NotoSansKhmer-Light.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Noto Sans Khmer";
+	font-style: normal;
+	font-weight: 400;
+	src: local("Noto Sans Khmer"), local("Noto-SansKhmer-Regular"), url("../assets/fonts/NotoSansKhmer-Regular.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Noto Sans Khmer";
+	font-style: normal;
+	font-weight: 500;
+	src: local("Noto Sans Khmer Bold"), local("Noto-SansKhmer-Medium"), url("../assets/fonts/NotoSansKhmer-Medium.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Noto Sans Khmer";
+	font-style: normal;
+	font-weight: 700;
+	src: local("Noto Sans Khmer Bold"), local("Noto-SansKhmer-Bold"), url("../assets/fonts/NotoSansKhmer-Bold.ttf") format("truetype");
+}
+
+ion-content {
+	font-weight: 500;
+	--background: #F2F4F7 !important;
+}
+
+ion-content {
+	--padding-start: 15px;
+	--padding-top: 20px;
+	--padding-end: 15px;
+	--padding-bottom: 20px;
+	padding: 28px 20px 0;
+	font-weight: 500;
+}
+
+body {
+	overflow-y: hidden;
+	overflow-x: hidden;
+}

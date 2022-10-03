@@ -1,6 +1,7 @@
 <template src="./HomePage.html">
 </template>
 <script lang="ts">
+import { BizMOBLocalStorage } from '@/bizMOBNative/bizmob-local-storage.service';
 import { LOCAL_STORAGE } from '@/shared/constants/localstorage-key.const';
 import { DateTimeFormatService } from '@/shared/services/datetime-format.service';
 import { EncryptionService } from '@/shared/services/encryption.service';
@@ -16,6 +17,8 @@ export default defineComponent({
       modalService: new ModalService(),
       dateTimeService: new DateTimeFormatService(),
       httpApiclient: new EncryptionService(),
+      bizMobStorage: new BizMOBLocalStorage(),
+      userstorage: new UserStorage(),
       aesEncryptedKey: '',
       date: '20220922'
     }
@@ -58,7 +61,7 @@ export default defineComponent({
       });
     },
     doLogin() {
-      this.$backrouter.subscribe('/login');
+      this.$router.push('/login');
     },
     gotoMap() {
       this.$router.push('/mappage').then( ()=> {
@@ -70,7 +73,8 @@ export default defineComponent({
       this.$logger.info('decrypt '+ JSON.parse(this.httpApiclient.decrypt(encryption, this.aesEncryptedKey)));
     },
     changeLangauge(lng: any) {
-      UserStorage.setUserStorage(LOCAL_STORAGE.I18N, lng);
+      this.userstorage.setUserStorage(LOCAL_STORAGE.I18N, lng);
+      // this.bizMobStorage.setStorage(LOCAL_STORAGE.I18N, lng); // support only Mobile
       this.$i18n.locale = lng;
     }
   },

@@ -46,7 +46,6 @@ import LoggerService from './shared/services/logger.service';
 import DataStoreSharing from './shared/services/data-sharing.service';
 import MapComponent from '@/shared/components/mapcomponent/map.component.vue';
 import FilterService from './shared/services/filter.service';
-import RouterService from './shared/services/router.service';
 
 const app = createApp(App)
 .use(i18n)
@@ -54,10 +53,24 @@ const app = createApp(App)
 .use(router)
 .use(store,key);
 
-app.config.globalProperties.$logger = new LoggerService();
-app.config.globalProperties.$store  = new DataStoreSharing();
-app.config.globalProperties.$filter = new FilterService();
-app.config.globalProperties.$backrouter = new RouterService(router);
+(window as any).bizMOB.initConfig({
+  App: {
+      _sAppKey: process.env.VUE_APP_KEY, // App Key
+      _bIsRelease: process.env.NODE_ENV === 'production', // Is Build Release
+  },
+  PushManager: {
+      _sPushUrl: process.env.VUE_APP_PUSH_URL, // Push Server Url
+  },
+  Network: {
+      _sBaseUrl: process.env.BASE_URL, // Local Base Url
+      _sContext: process.env.VUE_APP_CONTEXT, // Local Context
+  }
+});
+
+app.config.globalProperties.$bizMOB = (window as any).bizMOB; // this.$bizMOB
+app.config.globalProperties.$logger = new LoggerService(); // this.@logger
+app.config.globalProperties.$store  = new DataStoreSharing(); // this.$store
+app.config.globalProperties.$filter = new FilterService(); // this.$filter
 
 app.config.unwrapInjectedRef = true;
 Object.keys(IonComponents).forEach((key: string) => {

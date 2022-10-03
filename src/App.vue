@@ -14,7 +14,8 @@ export default defineComponent({
   name: 'App',
   data() {
     return {
-      encryptionService: new EncryptionService()
+      encryptionService: new EncryptionService(),
+      userstorage: new UserStorage()
     }
   },
   setup(){
@@ -26,8 +27,7 @@ export default defineComponent({
   beforeMount() {
     this.$logger.info('beforeMount App Vue');
     this.$store.setUseStore(this.usestore);
-    // init langauge
-    this.$i18n.locale = UserStorage.getUserStorage(LOCAL_STORAGE.I18N);
+    this.$i18n.locale = this.userstorage.getUserStorage(LOCAL_STORAGE.I18N);
     this.encryptionService.registerRSA().then( (publicKey: any) => {
       this.encryptionService.registerAES(publicKey).then((privateKey: any) => {
         this.$store.set('aesEncryptKey', privateKey);
